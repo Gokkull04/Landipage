@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.sticky-navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: black; /* Navbar background color */
+    z-index: 1000;
+    padding: 20px 0; /* Increase padding to make navbar bigger */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Button text color */
+    font-weight: bold;
+    font-size: 18px;
+    background-color: grey; /* Button background color */
+    padding: 10px 20px;
+    border: 2px solid white; /* Button border color */
+    border-radius: 5px; /* Optional: Rounds the corners of the buttons */
+    margin: 0 10px; /* Adds space between buttons */
+}
+
+nav ul li a:hover {
+    color: black; /* Button text color on hover */
+    background-color: white; /* Button background color on hover */
+    border-color: black; /* Button border color on hover */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensures each section takes up at least the full viewport height */
+}
+
+#home {
+    background-color: #f2f2f2;
+}
+
+#about {
+    background-color: #e6e6e6;
+}
+
+#contact {
+    background-color: #cccccc;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
