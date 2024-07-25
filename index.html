@@ -3,38 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sruthi Sangamam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <style>
+        /* Custom CSS for setting font to Times New Roman */
+        .font-times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
-<body>
-    <header class="sticky-navbar">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-cover bg-center bg-fixed font-times" style="background-image: url('./bg.jpeg');">
+
+    <header class="flex items-center justify-between px-3 w-full bg-black sticky top-0">
+        <img src="./logo.jpeg" alt="Logo" class="h-10 w-auto">
+        <ul class="flex space-x-3">
+            <li><a href="#home" class="bg-white border border-black text-black py-1.5 px-4 rounded-md hover:bg-black hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="bg-white border border-black text-black py-1.5 px-4 rounded-md hover:bg-black hover:text-white transition">About</a></li>
+            <li><a href="#contact" class="bg-white border border-black text-black py-1.5 px-4 rounded-md hover:bg-black hover:text-white transition">Contact</a></li>
+        </ul>
     </header>
 
-    <section id="home">
-        <img src="./DEva.png" alt="Contact Image" class="w-full h-full contact-image">
+    <section id="home" class="min-h-screen flex justify-center items-center bg-white bg-opacity-20">
+        <img src="DEva.png" class="">
     </section>
 
-    <section id="about">
-        <h1>About Us</h1>
-        <p>This is the about page.</p>
+    <section id="about" class="min-h-screen flex flex-col items-center text-center p-6 bg-white bg-opacity-20">
+        <h1 class="text-3xl mb-4 text-black font-bold">About Us</h1>
+        <div class="about-images flex flex-wrap justify-center gap-2 mb-4">
+            <img src="pic00.jpeg" alt="Photo 1" class="about-image w-1/2 transition-opacity duration-1000 visible">
+            <img src="pic01.jpeg" alt="Photo 2" class="about-image w-1/2 transition-opacity duration-1000 hidden opacity-0">
+            <img src="pic02.jpeg" alt="Photo 3" class="about-image w-1/2 transition-opacity duration-1000 hidden opacity-0">
+            <img src="pic03.jpeg" alt="Photo 4" class="about-image w-1/2 transition-opacity duration-1000 hidden opacity-0">
+            <img src="pic04.jpeg" alt="Photo 5" class="about-image w-1/2 transition-opacity duration-1000 hidden opacity-0">
+            <img src="pic05.jpeg" alt="Photo 6" class="about-image w-1/2 transition-opacity duration-1000 hidden opacity-0">
+        </div>
+        <p class="font-semibold mb-2 text-black text-2xl">About SruthiSangamam</p>
+        <p class="text-black text-xl font-semibold">
+            Welcome to the world of Sruthi Sangamam! We are a vibrant musical band dedicated to blending the rich traditions of Indian classical music with contemporary genres. Our diverse group of talented musicians brings a unique fusion of sounds that transcends cultural boundaries and resonates with audiences worldwide. Join us on a musical journey that celebrates harmony, innovation, and the timeless beauty of music. Experience the magic of Sruthi Sangamam!
+        </p>
     </section>
 
-    <section id="contact">
-        <h1>ஸ்ருதிசங்கமம்</h1>
-        <h2>Light Music Orchestra</h2>
-        <p>Always feel free to contact us.</p>
-        <div class="contact-info">
-            <p><strong>Phone:</strong> 9841308644</p>
-            <p><strong>Address:</strong> No:72/2, Barakka 2nd Street, Nammalwarpet, Chennai - 600012.</p>
-            <p><strong>Email:</strong> <a href="mailto:satisfyy07@gmail.com">satisfyy07@gmail.com</a></p>
+    <section id="contact" class="min-h-screen flex flex-col items-center text-center p-6 bg-white bg-opacity-20">
+        <h1 class="text-3xl mb-4 font-bold">ஸ்ருதிசங்கமம்</h1>
+        <h2 class="text-2xl mb-4 font-semibold">Light Music Orchestra</h2>
+        <p class="mb-4 text-2xl font-semibold">Always feel free to contact us.</p>
+        <div class="contact-info text-left inline-block">
+            <p class="mb-2 text-2xl"><strong>Phone:</strong> 9841308644</p>
+            <p class="mb-2 text-2xl"><strong>Address:</strong> No:72/2,<br> Barakka 2nd Street,<br> Nammalwarpet,<br> Chennai - 600012.</p>
+            <p class="text-2xl"><strong>Email:</strong> <a href="mailto:satisfyy07@gmail.com" class="text-black hover:underline">sruthisangamam@gmail.com</a></p>
         </div>
     </section>
+
+    <footer class="bg-gray-900 text-white text-center py-4">
+        <p>&copy; Copyright by Sruthi Sangamam</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle image rotation
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.about-image');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentImageIndex].classList.add('hidden', 'opacity-0');
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            images[currentImageIndex].classList.remove('hidden', 'opacity-0');
+        }
+
+        setInterval(showNextImage, 5000); // 5000ms = 5 seconds
+    </script>
 </body>
 </html>
